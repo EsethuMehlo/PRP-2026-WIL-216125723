@@ -1,0 +1,224 @@
+/* ------------ GLOBAL ------------ */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif; 
+    color: #ffffff;
+    background-color: #050505;
+    line-height: 1.6;
+}
+
+/* ------------------ NAVBAR ------------------- */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid #39FF14;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-green {
+    color: #39FF14 !important; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 0;
+}
+
+.nav-links a {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #39FF14 !important;
+}
+
+.register-btn {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #39FF14 !important;
+    color: #000 !important;
+    padding: 10px 22px !important;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    border: none;
+}
+
+.register-btn:hover {
+    transform: scale(1.05);
+}
+
+/* --------- HERO SECTION ----------- */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* --------------- TRAINERS & CARDS ----------------- */
+.trainers-bg {
+    position: relative;
+    padding: 100px 0;
+    background-image: url("https://www.ulagroup.com/wp-content/uploads/2019/08/Astera-Titan-Fitness-248.jpg");
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.trainers-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.9) 0%, rgba(57, 255, 20, 0.1) 100%);
+    z-index: 1;
+}
+
+.card {
+    background: #111 !important; 
+    border: 1px solid #222;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #39FF14 !important;
+    transform: translateY(-10px);
+}
+
+.card img {
+    height: 250px; 
+    object-fit: cover;
+}
+
+/* ---------------- PRICING ------------------ */
+.pricing-background-fixed {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), 
+                url('https://lh3.googleusercontent.com/u/0/d/1FENWD9KHJ046Whtu5YyVh9y1pZeetEtE');
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.border-green {
+    border: 2px solid #39FF14 !important;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+}
+
+.bg-green {
+    background-color: #39FF14 !important;
+}
+
+/* ---------------- ABOUT ------------------ */
+.about-wrapper {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
+                url("https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1024,format=auto/sites/default/files/d8/images/canvas/2025/03/27/35aced96-8f95-487c-afef-5ba2eae5a1e9_7390c88c.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.mission-quote {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    border-left: 6px solid #39FF14;
+    padding-left: 30px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/* ---------------- FOOTER ------------------ */
+.footer {
+    background-color: #000;
+    color: #ffffff;
+    padding: 60px 10% 30px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer h4 {
+    color: #39FF14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer ul { padding: 0; list-style: none; }
+
+.footer a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #39FF14;
+    padding-left: 5px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #444;
+}
+
+/* ---------------- TYPOGRAPHY ------------------ */
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-bebas { font-family: 'Bebas Neue', sans-serif; }
+.font-oswald { font-family: 'Oswald', sans-serif; }
